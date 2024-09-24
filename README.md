@@ -45,15 +45,3 @@ Ao encerrar a simulação (clicando no botão "Encerrar Simulação"), um relat�
 - O número de veículos que estavam esperando em cada direção.
 - O tempo de espera de cada veículo.
 
-Exemplo de saída:
-
-Semáforo NORTH: Fechado Veículos esperando: 2
-
-Veículo esperando por 8 segundos
-Veículo esperando por 5 segundos
-Semáforo SOUTH: Aberto Veículos esperando: 0
-
-Semáforo EAST: Fechado Veículos esperando: 1
-
-Veículo esperando por 4 segundos
-Semáforo WEST: Fechado Veículos esperando: 0
