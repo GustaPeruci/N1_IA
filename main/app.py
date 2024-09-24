@@ -1,6 +1,7 @@
 import time
 import tkinter as tk
-from traffic_light import Vehicle, TrafficLight
+from vehicle import Vehicle
+from traffic_light import TrafficLight
 from traffic_control_system import TrafficControlSystem
 import random
 
@@ -46,7 +47,7 @@ class TrafficSimulationApp:
         self.update_vehicle_queues()
 
         # Gera novos veículos aleatoriamente
-        if random.random() < 0.5:
+        if random.random() < 0.5: #50% de chance de gerar um veículo
             new_vehicle = generate_random_vehicle()
             print(f"Veículo chegou na direção {new_vehicle.direction.upper()}.")
             for light in self.control_system.lights:
