@@ -37,7 +37,7 @@ Este projeto implementa uma simulação de controle de tráfego urbano utilizand
 
 Ao iniciar a simulação, uma janela será aberta mostrando os semáforos e as filas de veículos. Veículos azuis são adicionados aleatoriamente e são exibidos próximos ao semáforo correspondente. Os semáforos mudam de cor conforme o tempo passa, e os veículos são removidos quando o sinal fica verde.
 
-![Interface da Simulação](./example.png) _(Inclua uma captura de tela da interface aqui)_
+![Interface da Simulação](./example.png) 
 
 ## Relatório Final
 
@@ -49,3 +49,13 @@ Ao encerrar a simulação (clicando no botão "Encerrar Simulação"), um relat�
 
 Exemplo de saída:
 
+Semáforo NORTH: Fechado Veículos esperando: 2
+
+Veículo esperando por 8 segundos
+Veículo esperando por 5 segundos
+Semáforo SOUTH: Aberto Veículos esperando: 0
+
+Semáforo EAST: Fechado Veículos esperando: 1
+
+Veículo esperando por 4 segundos
+Semáforo WEST: Fechado Veículos esperando: 0
