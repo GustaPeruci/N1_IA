@@ -12,12 +12,10 @@ Este projeto implementa uma simulação de controle de tráfego urbano utilizand
 
 ## Estrutura do Projeto
 
-- **`vehicle.py`**: Define a classe `Vehicle`, que representa um veículo no sistema.
-- **`traffic_light.py`**: Define a classe `TrafficLight`, que representa um semáforo com as suas operações de abertura e fechamento.
-- **`traffic_control_system.py`**: Implementa a lógica de controle dos semáforos, gerenciando o estado de cada um e as trocas de sinal.
-- **`traffic_simulation_app.py`**: Cria a interface gráfica usando Tkinter, onde os semáforos e os veículos são visualizados.
-- **`utils.py`**: Funções utilitárias para gerar veículos aleatórios e criar relatórios.
-- **`main.py`**: Arquivo principal que inicializa o sistema e a interface gráfica.
+- **`traffic_light.py`**: Define a classe `TrafficLight`, que representa um semáforo com suas operações de abrir, fechar e alternar estados.
+- **`traffic_control_system.py`**: Implementa a lógica de controle dos semáforos, gerenciando seu estado e determinando quando mudar de sinal.
+- **`vehicle.py`**: Define a classe `Vehicle`, representando os veículos que aguardam nos semáforos.
+- **`app.py`**: Cria a interface gráfica da simulação utilizando `Tkinter`. Controla o ciclo de vida da simulação e atualiza o estado visual dos semáforos e das filas de veículos.
 
 ## Funcionamento do Sistema
 
@@ -47,15 +45,3 @@ Ao encerrar a simulação (clicando no botão "Encerrar Simulação"), um relat�
 - O número de veículos que estavam esperando em cada direção.
 - O tempo de espera de cada veículo.
 
-Exemplo de saída:
-
-Semáforo NORTH: Fechado Veículos esperando: 2
-
-Veículo esperando por 8 segundos
-Veículo esperando por 5 segundos
-Semáforo SOUTH: Aberto Veículos esperando: 0
-
-Semáforo EAST: Fechado Veículos esperando: 1
-
-Veículo esperando por 4 segundos
-Semáforo WEST: Fechado Veículos esperando: 0
