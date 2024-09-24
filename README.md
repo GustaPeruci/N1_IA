@@ -12,12 +12,10 @@ Este projeto implementa uma simulação de controle de tráfego urbano utilizand
 
 ## Estrutura do Projeto
 
-- **`vehicle.py`**: Define a classe `Vehicle`, que representa um veículo no sistema.
-- **`traffic_light.py`**: Define a classe `TrafficLight`, que representa um semáforo com as suas operações de abertura e fechamento.
-- **`traffic_control_system.py`**: Implementa a lógica de controle dos semáforos, gerenciando o estado de cada um e as trocas de sinal.
-- **`traffic_simulation_app.py`**: Cria a interface gráfica usando Tkinter, onde os semáforos e os veículos são visualizados.
-- **`utils.py`**: Funções utilitárias para gerar veículos aleatórios e criar relatórios.
-- **`main.py`**: Arquivo principal que inicializa o sistema e a interface gráfica.
+- **`traffic_light.py`**: Define a classe `TrafficLight`, que representa um semáforo com suas operações de abrir, fechar e alternar estados.
+- **`traffic_control_system.py`**: Implementa a lógica de controle dos semáforos, gerenciando seu estado e determinando quando mudar de sinal.
+- **`vehicle.py`**: Define a classe `Vehicle`, representando os veículos que aguardam nos semáforos.
+- **`app.py`**: Cria a interface gráfica da simulação utilizando `Tkinter`. Controla o ciclo de vida da simulação e atualiza o estado visual dos semáforos e das filas de veículos.
 
 ## Funcionamento do Sistema
 
