@@ -5,8 +5,8 @@ from traffic_light import TrafficLight
 from traffic_control_system import TrafficControlSystem
 import random
 
+"""Gera um veículo com uma direção aleatória."""
 def generate_random_vehicle():
-    """Gera um veículo com uma direção aleatória."""
     directions = ["north", "south", "east", "west"]
     return Vehicle(random.choice(directions))
 
@@ -25,8 +25,8 @@ class TrafficSimulationApp:
 
         self.update_simulation()
 
+    """Configura a interface gráfica dos semáforos e suas posições."""
     def setup_interface(self):
-        """Configura a interface gráfica dos semáforos e suas posições."""
         positions = {
             "north": (250, 200),
             "south": (250, 300),
@@ -39,8 +39,8 @@ class TrafficSimulationApp:
             self.traffic_lights[light.direction] = self.canvas.create_oval(x-20, y-20, x+20, y+20, fill=color)
             self.vehicle_queues[light.direction] = []
 
+    """Atualiza a simulação, aplicando regras e gerenciando veículos."""
     def update_simulation(self):
-        """Atualiza a simulação, aplicando regras e gerenciando veículos."""
         self.control_system.apply_rules()
         self.control_system.update_wait_times()
         self.update_traffic_lights()
@@ -56,14 +56,14 @@ class TrafficSimulationApp:
 
         self.root.after(1000, self.update_simulation)
 
+    """Atualiza a cor dos semáforos na interface gráfica."""
     def update_traffic_lights(self):
-        """Atualiza a cor dos semáforos na interface gráfica."""
         for light in self.control_system.lights:
             color = "green" if light.is_green else "yellow" if light.is_yellow else "red"
             self.canvas.itemconfig(self.traffic_lights[light.direction], fill=color)
 
+    """Atualiza a visualização das filas de veículos esperando no semáforo."""
     def update_vehicle_queues(self):
-        """Atualiza a visualização das filas de veículos esperando no semáforo."""
         queue_positions = {
             "north": (245, 165),
             "south": (245, 325),
@@ -109,8 +109,8 @@ class TrafficSimulationApp:
                 )
                 self.vehicle_queues[light.direction].append(vehicle_id)
 
+    """Encerra a simulação."""
     def quit_simulation(self):
-        """Encerra a simulação."""
         self.root.destroy()
 
 def main():

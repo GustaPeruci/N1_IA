@@ -5,15 +5,11 @@ class TrafficControlSystem:
         self.lights = lights
         self.current_green_light = lights[0]  # Começa com o primeiro semáforo
         self.current_green_light.open_light()  # Abre o semáforo inicial
-        self.time_elapsed = 0
-        self.default_green_time = 10  # Tempo padrão para o sinal verde
-        self.max_green_time = 30  # Tempo máximo para o sinal verde
-        self.yellow_time = 3  # Tempo que o sinal ficará amarelo
+        self.max_green_time = 15  # Tempo máximo para o sinal verde
+        self.yellow_time = 1  # Tempo que o sinal ficará amarelo
 
+    """Aplica as regras do semáforo e gerencia a mudança de sinal."""
     def apply_rules(self):
-        """Aplica as regras do semáforo e gerencia a mudança de sinal."""
-        self.time_elapsed += 1
-
         if self.current_green_light:
             self.current_green_light.last_changed += 1
 
@@ -34,8 +30,8 @@ class TrafficControlSystem:
         if not self.current_green_light:
             self.choose_next_light()
 
+    """Escolhe o próximo semáforo a abrir baseado em regras de prioridade."""
     def choose_next_light(self):
-        """Escolhe o próximo semáforo a abrir baseado em regras de prioridade."""
         best_light = None
         max_waiting = 0
 
@@ -54,8 +50,8 @@ class TrafficControlSystem:
             print(f"Semáforo {best_light.direction.upper()} abriu.")
             self.current_green_light = best_light
 
+    """Atualiza o tempo de espera de todos os veículos nos semáforos."""
     def update_wait_times(self):
-        """Atualiza o tempo de espera de todos os veículos nos semáforos."""
         for light in self.lights:
             if not light.is_green:
                 for vehicle in light.waiting_vehicles:
