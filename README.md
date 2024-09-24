@@ -37,7 +37,7 @@ Este projeto implementa uma simulação de controle de tráfego urbano utilizand
 
 Ao iniciar a simulação, uma janela será aberta mostrando os semáforos e as filas de veículos. Veículos azuis são adicionados aleatoriamente e são exibidos próximos ao semáforo correspondente. Os semáforos mudam de cor conforme o tempo passa, e os veículos são removidos quando o sinal fica verde.
 
-![Interface da Simulação](./screenshot.png) _(Inclua uma captura de tela da interface aqui)_
+![Interface da Simulação](./example.png) _(Inclua uma captura de tela da interface aqui)_
 
 ## Relatório Final
 

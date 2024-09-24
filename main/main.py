@@ -1,6 +1,6 @@
 import tkinter as tk
 from traffic_light import TrafficLight
-from traffic_control_system import TrafficControlSystem
+from main.traffic_control_system import TrafficControlSystem
 from traffic_simulation_app import TrafficSimulationApp
 
 def main():
